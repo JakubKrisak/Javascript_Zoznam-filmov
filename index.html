@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="myScript3.js"></script>
+    <title>Zoznam filmov</title>
+
+    <style>
+
+        body{
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+            background-image: url("space.png");
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 24px;
+        }
+
+        form{
+            width: 40%;
+            margin: auto;
+            padding: 50px 50px;
+            border: 2px solid black;
+            border-radius: 13px;
+            background-color: aqua;
+            opacity: 0.8;
+        }
+
+        form > label { 
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 28px;
+        }
+
+        div > input {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 18px;
+            border-radius: 7px;
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: blueviolet;
+            color: yellow;
+        }
+
+        div > input:hover {
+            background-color: yellow;
+            opacity: 0.7;
+            color: black;
+        }
+
+        form > input {
+            border-radius: 7px;
+            width: 80%;
+            margin-bottom: 5px;
+        }
+
+        #zoznam {
+            width: 40%;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding: 50px 50px;
+            border: 2px solid black;
+            border-radius: 13px;
+            background-color: aqua;
+            opacity: 0.8;
+        }
+
+        .remove {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <label for="movie">Názov filmu: </label><br>
+        <input type="text" id="movie" name="movie"><br>
+
+        <label for="year">Rok vydania: </label><br>
+        <input type="text" id="year" name="year"><br>
+
+        <label for="actors">Herci: </label><br>
+        <input type="text" id="actors" name="actors">
+        <br><br>
+        <div>
+            <input type="button" value="Vložiť" onclick="movieForm(event)">
+
+            <input type="button" value="Odstrániť posledný" onclick="del(event)">
+
+            <input type="button" value="Odstrániť celý zoznam" onclick="dellAll(event);">
+        </div>
+    </form>
+
+    <div id="zoznam">
+        <h1>ZOZNAM FILMOV</h1>
+        <span>
+            <p id="content"></p>
+        </span>
+    </div>
+    
+</body>
+</html>
